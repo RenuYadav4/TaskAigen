@@ -14,19 +14,26 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // CORS setup
-const allowedOrigins =
-  process.env.NODE_ENV === "production"
-    ? ["https://taskaigen-1.onrender.com"]
-    : ["http://localhost:5173"];
+const allowedOrigins = [
+  "https://taskaigen-1.onrender.com", // your frontend
+  "http://localhost:5173"             // local dev
+];
 
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 
 
 
