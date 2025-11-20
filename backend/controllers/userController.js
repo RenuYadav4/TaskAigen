@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import Todo from "../models/Todo.js";
 import { inactivityProgressUpdate } from "../utils/inactivityProgressUpdate.js";
 
