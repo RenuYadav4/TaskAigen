@@ -1,0 +1,15 @@
+/* Snake trail dots */
+.trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(90deg, #f1fd6b, #f1fd6b);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    mix-blend-mode: difference;
+  }
+  
+  

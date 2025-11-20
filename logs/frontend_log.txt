@@ -1,0 +1,54 @@
+Frontend Log – TaskAIgen
+------------------------
+
+Date: 20 November 2025
+
+1. Project Initialization
+   - Created frontend project using Vite + React.
+   - Installed TailwindCSS for styling.
+   - Installed react-router-dom, axios, framer-motion, react-icons.
+
+2. Authentication UI
+   - Built Login and Signup pages.
+   - Implemented protected routes.
+   - Added token storage using localStorage.
+   - Redirect users based on login status.
+
+3. Dashboard Development
+   - Created sidebar with sections:
+     Profile, Calendar, AI Plan Generator, Categories, Workspace, FocusMode, Logout.
+   - Implemented real-time clock and date.
+   - Added Weekly & Monthly calendar view.
+
+4. Task & Category UI
+   - Created forms for adding categories & tasks.
+   - Added editing and deleting options.
+   - Created workspace with filtering and custom search UI.
+   - Display tasks by category.
+   - Added task status update (pending, completed, overdue).
+
+5. Progress & History
+   - Integrated backend APIs to fetch:
+     - Progress
+     - Task history
+     - User profile
+   - Displayed daily progress and activity graph.
+
+6. AI Plan Generator
+   - Built UI for entering goal prompt.
+   - Implemented generated 7-day plan display.
+   - Added loading states & error handling.
+
+7. UI Enhancements
+   - Applied TailwindCSS for smooth responsive design.
+   - Added animations using Framer Motion.
+   - Improved layout for mobile and desktop.
+   - Styled forms, buttons, hover effects, empty states.
+
+8. Testing & Fixes
+-User info was not available immediatley after login, needed to refresh : fixed this from backend controller and frontend handler.
+  - Fixed Progress update and message.
+  - fixed some responsiveness issue.
+  
+
+End of frontend logs.
