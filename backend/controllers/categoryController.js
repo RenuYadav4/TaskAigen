@@ -25,7 +25,7 @@ export const createCategory = async (req, res) => {
 
         const category = new Category({
           name: name.trim(),
-          user: req.user._id,
+          userId: req.user._id,
         });
     
         await category.save();
