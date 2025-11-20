@@ -15,8 +15,8 @@ const PORT = process.env.PORT || 5000;
 
 // CORS setup
 const allowedOrigins = [
-  "https://taskaigen-1.onrender.com", // your frontend
-  "http://localhost:5173"             // local dev
+  "https://taskaigen-1.onrender.com",  // deployed frontend
+  "http://localhost:5173"              // local dev
 ];
 
 app.use(
@@ -28,9 +28,11 @@ app.use(
         callback(new Error("Not allowed by CORS"));
       }
     },
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+    preflightContinue: false,
+    optionsSuccessStatus: 200,
   })
 );
 
