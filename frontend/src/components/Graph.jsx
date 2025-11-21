@@ -13,11 +13,10 @@ import { AuthContext } from "../context/AuthContext";
 const Graph = () => {
   const { user } = useContext(AuthContext);
 
-  // Convert backend taskHistory → graph data
   const data =
     user?.taskHistory?.map((item) => ({
       day: item.day,
-      progress: item.progress * 25, // scale for graph
+      progress: item.progress, // correct raw value: 0,2,4
     })) || [];
 
   return (
@@ -51,17 +50,16 @@ const Graph = () => {
               tickLine={false}
             />
 
-            {/* Y-axis shows 0,2,4 (converted back using tickFormatter) */}
+            {/* Correct Y-axis for 0,2,4 values */}
             <YAxis
-              tickFormatter={(value) => value / 25}
-              ticks={[0, 50, 100]}
+              ticks={[0, 2, 4]}
               tick={{ fill: "#9ca3af", fontSize: 12 }}
               axisLine={false}
               tickLine={false}
             />
 
             <Tooltip
-              formatter={(value) => [`${value / 25}`, "Progress"]}
+              formatter={(value) => [`${value}`, "Progress"]}
               contentStyle={{
                 backgroundColor: "#1f2937",
                 border: "1px solid #f1fd6b",
