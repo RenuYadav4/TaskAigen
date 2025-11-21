@@ -8,28 +8,39 @@ import FocusMode from './components/FocusMode'
 import TasksList from './components/TasksList'
 import TodoDashboard from './components/TodoDashboard'
 import Progress from './components/Progress'
+import PlanGenerator from './components/planGenerator'
+import { useContext } from 'react'
+import { AuthContext } from './context/AuthContext'
 
 function App() {
+const {openGenerator} = useContext(AuthContext);
 
   return (
-    <Routes>
+    <>
+      <Routes>
 
-      {/* Public routes */}
-      <Route path='/' element={<LandingPage />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/signup' element={<Signup />} />
+        {/* Public routes */}
+        <Route path='/' element={<LandingPage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
 
-      {/* dashboard layout routes */}
-      {/* <Route path='/' element={<LandingPage />} /> */}
-      <Route path='dashboard' element={<Home />} >
-        {/* <Route path='/login' element={<Login />} />
+        {/* dashboard layout routes */}
+        {/* <Route path='/' element={<LandingPage />} /> */}
+        <Route path='dashboard' element={<Home />} >
+          {/* <Route path='/login' element={<Login />} />
         <Route path="/signup" element={<Signup />} /> */}
-        <Route index element={<TodoDashboard />} /> {/* default page inside Home */}
-        <Route path="focus-mode" element={<FocusMode />} />
-        <Route path="workspace" element={<TasksList />} />
+          <Route index element={<TodoDashboard />} /> {/* default page inside Home */}
+          <Route path="focus-mode" element={<FocusMode />} />
+          <Route path="workspace" element={<TasksList />} />
 
-      </Route>
-    </Routes>
+        </Route>
+      </Routes>
+
+      {
+        openGenerator &&
+        <PlanGenerator />
+      }
+    </>
   )
 }
 

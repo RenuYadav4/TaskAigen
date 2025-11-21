@@ -64,9 +64,9 @@ const TodoDashboard = () => {
                         {/* <AiPlanGenerator/> */}
                     </div>
 
-                    {openGenerator &&
+                    {/* {openGenerator &&
                         <PlanGenerator />
-                    }
+                    } */}
                 </div>
 
 

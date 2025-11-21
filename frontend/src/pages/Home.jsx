@@ -4,12 +4,13 @@ import TodoDashboard from '../components/TodoDashboard';
 import { TodoContext } from '../context/TodoContext';
 import Calendar from '../components/Calender';
 import { Outlet } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
+import PlanGenerator from '../components/planGenerator';
 
 const Home = () => {
   const { isSmallScreen, setIsSmallScreen, setHovered, hovered } = useContext(TodoContext);
   const effectiveSmallScreen = hovered ? false : isSmallScreen;
   const [showCalendar, setShowCalendar] = useState(false);
-
 
   return (
     <div className=" flex relative min-h-screen  items-center justify-center bg-gradient-to-br from-slate-950 via-gray-900 to-black overflow-hidden text-white">
@@ -31,8 +32,9 @@ const Home = () => {
 
       <div className="ml-25 z-20 left-25  absolute flex w-full justify-start">
         {showCalendar && <Calendar />}
-
+        
       </div>
+
 
     </div>
   )

@@ -36,7 +36,7 @@ const PlanGenerator = () => {
   };
 
   return (
-    <div className="absolute inset-0 bg-black/60 backdrop-blur-xl flex justify-center z-50">
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-xl flex justify-center z-50">
       <div className="mt-10 w-[90%] max-w-2xl h-[80vh] rounded-3xl border border-white/20 
         bg-neutral-900/40 backdrop-blur-2xl shadow-[0_0_40px_rgba(0,0,0,0.5)]
         flex flex-col overflow-hidden relative transition-all duration-300 
