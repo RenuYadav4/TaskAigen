@@ -5,7 +5,7 @@ const categories = [
   {
     title: "Diet & Nutrition",
     desc: "Track meals, hydration, and maintain a healthy lifestyle.",
-    image: "./diet-plans.jpg", // replace with your image
+    image: ".diet-plans.jpg", // replace with your image
   },
   {
     title: "Study & Learning",

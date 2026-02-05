@@ -89,8 +89,8 @@ const Signup = () => {
         {/* Neon Glow Orbs */}
         <div className="absolute inset-0 overflow-hidden z-0">
           <div className="absolute top-[-150px] left-[-150px] w-[400px] h-[400px] bg-blue-600 rounded-full blur-[120px] opacity-40"></div>
-          <div className="absolute bottom-[-150px] right-[-150px] w-[400px] h-[400px] bg-pink-600 rounded-full blur-[120px] opacity-40"></div>
-          <div className="absolute top-[300px] left-[50%] translate-x-[-50%] w-[500px] h-[300px] bg-purple-700 rounded-full blur-[100px] opacity-20"></div>
+          <div className="absolute bottom-[-150px] right-[-150px] w-[400px] h-[400px] bg-yellow-600 rounded-full blur-[120px] opacity-40"></div>
+          <div className="absolute top-[300px] left-[50%] translate-x-[-50%] w-[500px] h-[300px] bg-yellow-600 rounded-full blur-[100px] opacity-20"></div>
         </div>
 
         {/* Main Container */}
@@ -103,7 +103,7 @@ const Signup = () => {
             className="flex-1 flex justify-center items-center bg-transparent"
           >
             <div className="flex flex-col items-center w-full relative">
-              <h1 className="text-xl md:text-3xl xl:text-4xl font-semibold tracking-wide text-center mb-6 bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+              <h1 className="text-xl md:text-3xl xl:text-4xl font-semibold tracking-wide text-center mb-6 bg-gradient-to-r from-yellow-400 to-gray-400 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                 Join the <span className="font-extrabold">Family</span> to Grow
               </h1>
 
@@ -183,13 +183,13 @@ const Signup = () => {
           <motion.div
             animate={{ x: swapped ? "-122%" : "0%" }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="hidden md:block relative w-[45%] bg-gradient-to-br from-pink-700/40 via-purple-700/30 to-blue-700/40 backdrop-blur-xl"
+            className="hidden md:block relative w-[45%] bg-gradient-to-br from-yellow-500/40 via-yellow-500/30 to-yellow-300/40 backdrop-blur-xl"
           >
             {/* Glow Edge */}
-            <div className="absolute left-0 top-0 w-[6px] h-full bg-gradient-to-b from-pink-500 to-blue-400 shadow-[0_0_25px_#00ffff]"></div>
+            <div className="absolute left-0 top-0 w-[6px] h-full bg-gradient-to-b from-gray-500 to-yellow-400 shadow-[0_0_25px_#00ffff]"></div>
 
             <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
-              <h2 className="text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400 drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]">
+              <h2 className="text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-400 drop-shadow-[0_0_25px_rgba(255,255,255,0.4)]">
                 Back to Productivity
               </h2>
               <p className="mt-4 lg:max-w-[20vw] text-gray-300 text-base drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
